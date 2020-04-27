@@ -1,0 +1,4 @@
+[submodule "eramba"]
+	path = eramba
+	url = https://github.com/StayPirate/eramba.git
+	branch = master
