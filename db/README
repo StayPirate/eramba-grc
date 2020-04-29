@@ -1,0 +1,2 @@
+Change `database.env` with your data.
+Copy here the database schema to inizialize MariaDB at first run. It's located in the Eramba source code at `/eramba_v2/app/Config/db_schema/e*.sql`
