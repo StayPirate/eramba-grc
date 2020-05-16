@@ -1,4 +1,4 @@
-db/database.env.*
+eramba_vars.env
 db/*.sql
 eramba/database.php
 eramba/default-ssl.conf

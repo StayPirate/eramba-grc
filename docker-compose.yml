@@ -9,7 +9,7 @@ services:
     image: eramba_db-enterprise:local
     container_name: Eramba_mariadb
     env_file:
-      - db/database.env
+      - eramba_vars.env
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
       - eramba_db:/var/lib/mysql
@@ -25,10 +25,11 @@ services:
       args:
         - HTTPD_USER=www-data
     image: eramba_web-enterprise:local
+    env_file:
+      - eramba_vars.env
     container_name: Eramba_httpd
     volumes: 
       - ./eramba/certs:/certs
-      - ./eramba/default-ssl.conf:/etc/apache2/sites-enabled/default-ssl.conf
       - ./eramba/database.php:/var/www/html/app/Config/database.php
     ports:
       - "80:8080"
